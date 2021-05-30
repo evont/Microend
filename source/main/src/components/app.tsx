@@ -10,7 +10,7 @@ const App: FunctionalComponent = () => {
     return (
         <div id="preact_root">
             <Header />
-            <div style="margin-top: 80px">
+            <div style="margin-top: 70px">
             <Router>
                 <Route path="/" component={Home} />
                 <Route path="/:app*" component={Portal} />

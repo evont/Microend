@@ -1,0 +1,2 @@
+(window["webpackJsonp_mvue3"]=window["webpackJsonp_mvue3"]||[]).push([["about"],{f820:function(e,n,t){"use strict";t.r(n);var u=t("7a23"),a={class:"about"},c=Object(u["e"])("h1",null,"This is an about page",-1);function o(e,n){return Object(u["n"])(),Object(u["c"])("div",a,[c])}const s={};s.render=o;n["default"]=s}}]);
+//# sourceMappingURL=about.cfecdf58.js.map

@@ -6,9 +6,11 @@ const Portal: FunctionalComponent = () => {
   if (!window.qiankunStarted) {
     //@ts-ignore
     window.qiankunStarted = true;
-    start();
+    start({ prefetch: false });
   }
-  return (<div id="subapp"></div>);
+  return (<div class="container">
+    <div  id="app"></div>
+  </div>);
 };
 
 export default Portal;

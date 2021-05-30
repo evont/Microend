@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{cMF2:function(n,t,i){"use strict";i.r(t);var o=i("hosL"),w=i("Dhor");t.default=function(){return window.qiankunStarted||(window.qiankunStarted=!0,Object(w.c)()),Object(o.h)("div",{id:"subapp"})}}}]);
-//# sourceMappingURL=route-portal.chunk.ace87.js.map

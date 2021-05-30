@@ -1,24 +1,23 @@
-import { FunctionalComponent, h } from 'preact';
-import { Link } from 'preact-router/match';
-import style from './style.css';
+
+
+import { FunctionalComponent, h } from "preact";
+import { Link } from "preact-router/match";
+import style from "./style.css";
 
 const Header: FunctionalComponent = () => {
-    return (
-        <header class={style.header}>
-            <h1>Preact App</h1>
-            <nav>
-                <Link activeClassName={style.active} href="/">
-                    Home
-                </Link>
-                <Link activeClassName={style.active} href="/c/mvue2">
-                    Me
-                </Link>
-                <Link activeClassName={style.active} href="/c/mvue3">
-                    John
-                </Link>
-            </nav>
-        </header>
-    );
+ function toLink(link: string) {
+     location.href = link; // base 路由有可能影响到href
+ }
+  return (
+    <header class={style.header}>
+      <nav>
+        <a href="javascript:void(0)" onClick={() => toLink("/")}>Home</a>
+        <a href="javascript:void(0)" onClick={() => toLink("/c/mvue2")}>Vue2</a>
+        <a href="javascript:void(0)" onClick={() => toLink("/c/mvue3")}>Vue3</a>
+        <a href="javascript:void(0)" onClick={() => toLink("/c/mreact")}>React</a>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;

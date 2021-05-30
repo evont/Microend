@@ -9,19 +9,27 @@ function getActiveRule(prefix: string) {
 }
 
 const isDev = process.env.NODE_ENV == "development";
-console.log(isDev);
 registerMicroApps([
   {
     name: 'mvue3', // app name registered
     entry:  isDev ? '//localhost:8333/' : '/mvue3/',
-    container: '#subapp',
-    activeRule: getActiveRule('/c/mvue3'),
+    container: '#app',
+    activeRule: '/c/mvue3',
   },
   {
     name: 'mvue2', // app name registered
     entry: isDev ? '//localhost:8222/' : '/mvue2/',
-    container: '#subapp',
+    container: '#app',
     activeRule: getActiveRule('/c/mvue2'),
+    props: {
+      testData: 'testdata'
+    }
+  },
+  {
+    name: 'mreact', // app name registered
+    entry: isDev ? '//localhost:8444/' : '/mreact/',
+    container: '#app',
+    activeRule: getActiveRule('/c/mreact'),
     props: {
       testData: 'testdata'
     }
